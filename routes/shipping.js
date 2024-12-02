@@ -17,7 +17,7 @@ router.post("/create", async (req, res) => {
         error: "All fields required",
       });
 
-    const newShipping = prisma.shipping.create({
+    const newShipping = await prisma.shipping.create({
       data: {
         userId,
         productId,
